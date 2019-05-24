@@ -28,7 +28,7 @@ function getGitProviderLink(cb, fileFsPath, lines, pr) {
         .then(readConfigFile)
         .then(config => {
 
-            gitRev.long(repoDir, function (branchErr, sha) {
+            gitRev.short(repoDir, function (branchErr, sha) {
                 var rawUri,
                     configuredBranch,
                     provider = null,
